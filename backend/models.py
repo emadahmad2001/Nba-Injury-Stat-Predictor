@@ -1,6 +1,6 @@
-# models.py
-from pydantic import BaseModel
+from typing import Optional  # Add this import at the top
 from enum import Enum
+from pydantic import BaseModel
 
 class Position(str, Enum):
     PG = "Point Guard"
@@ -13,18 +13,20 @@ class InjuryType(str, Enum):
     ANKLE = "Ankle Sprain"
     ACL = "ACL Tear"
     HAMSTRING = "Hamstring Strain"
-    # Add more injury types
 
 class PlayerStats(BaseModel):
     points: float
     rebounds: float
     assists: float
-    # Additional stats
 
 class Player(BaseModel):
-    name: str
+    name: str = "Player Name"  # Added default value
     position: Position
     height: float  # in inches
     weight: float  # in lbs
-    injury: Optional[InjuryType]
+    injury: Optional[InjuryType] = None  # Made optional with default None
     current_stats: PlayerStats
+
+    # Add this method for compatibility
+    def dict(self):
+        return super().dict()
