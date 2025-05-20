@@ -1,46 +1,41 @@
-# NBA Injury Statistics and Prediction System
+# NBA Injury Stat Predictor 2025 🏀
 
-A modern web application for tracking and analyzing NBA player injuries, providing insights into injury patterns and their impact on player performance.
+An advanced analytics dashboard for predicting NBA player performance after injuries, featuring real-time data visualization and machine learning predictions.
 
 ## Features
 
-### Player Management
-- View and manage NBA player profiles
-- Add custom players to the system
-- Track player statistics and performance metrics
+### 1. Player Performance Prediction
+- Predict post-injury performance for NBA players
+- Support for multiple injury types (ankle, knee, hamstring, etc.)
+- Customizable recovery time input
+- Real-time performance metrics calculation
 
-### Injury Tracking
-- Record and monitor player injuries
-- Detailed injury information including:
-  - Injury type and severity
-  - Recovery timeline
-  - Current status
-- Historical injury data analysis
+### 2. Advanced Visualizations
+- **Shot Chart Heatmap**: Visual representation of player shooting patterns
+- **Player Efficiency Radar**: Multi-dimensional performance metrics
+- **League Trend Sparklines**: Year-over-year statistical comparisons
 
-### Injury Predictions
-- Advanced injury impact analysis
-- Recovery time predictions
-- Customized rehabilitation recommendations
-- Performance impact assessments
+### 3. 2025 Player Database
+- Updated roster with current NBA stars
+- Comprehensive player statistics
+- Team affiliations and injury history
 
-## Technology Stack
+## Tech Stack
 
-- **Frontend**: React with TypeScript
-- **UI Framework**: Tailwind CSS with DaisyUI
-- **State Management**: React Query
-- **Animations**: Framer Motion
-- **API Integration**: Axios
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Visualization**: Canvas API for custom charts
+- **Data Sources**: NBA.com, Basketball-Reference.com
 
 ## Getting Started
 
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/nba-injury-stat-predictor.git
+cd nba-injury-stat-predictor
 ```
 
 2. Install dependencies:
 ```bash
-cd nba-injury-stat-predictor/frontend
 npm install
 ```
 
@@ -49,42 +44,32 @@ npm install
 npm start
 ```
 
+4. Open your browser and navigate to `http://localhost:3000`
+
 ## Project Structure
 
 ```
-frontend/
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/         # Main application pages
-│   ├── services/      # API and data services
-│   ├── types/         # TypeScript type definitions
-│   └── utils/         # Helper functions and utilities
+nba-injury-stat-predictor/
+├── frontend/
+│   ├── components/
+│   │   ├── ShotChart.js
+│   │   ├── RadarChart.js
+│   │   ├── TrendGraph.js
+│   │   └── HomeTab.js
+│   ├── data/
+│   │   └── players.json
+│   ├── styles.css
+│   └── index.html
+├── backend/
+│   └── main.py
+└── README.md
 ```
 
-## Business Value
+## Data Sources
 
-1. **Injury Prevention**
-   - Early identification of injury risks
-   - Data-driven prevention strategies
-   - Reduced player downtime
-
-2. **Performance Optimization**
-   - Impact analysis on player statistics
-   - Recovery timeline optimization
-   - Return-to-play recommendations
-
-3. **Resource Management**
-   - Better planning for player rotations
-   - Informed decision-making for medical staff
-   - Optimized rehabilitation programs
-
-## Future Enhancements
-
-- Machine learning integration for more accurate predictions
-- Real-time injury updates and notifications
-- Advanced analytics dashboard
-- Mobile application development
-- Integration with external medical systems
+- Player Statistics: NBA.com/stats
+- Shot Charts: NBA.com/statshotcharts
+- League Trends: basketball-reference.com/leagues/NBA_2025
 
 ## Contributing
 
@@ -94,8 +79,12 @@ frontend/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 ## Acknowledgments
 
-- NBA for providing player statistics and injury data
-- FastAPI and React communities for their excellent documentation
+- NBA.com for providing comprehensive statistics
+- Basketball-Reference.com for historical data
 - All contributors who have helped improve this project
